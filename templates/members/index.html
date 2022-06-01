@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Members</h1>
+
+<nav>
+    <ul>
+        <li>
+            <a href="/members/add">Add New Member</a>
+        </li>
+        <!-- CONVERT INTO BUTTONS -->
+
+
+
+
+        <div>
+            {% for member in all_members %}
+
+            <a href="/members/{{member.id}}">
+                <p>{{member.first_name}} {{member.last_name}}</p>
+
+
+
+            </a>
+        </div>
+
+        {% endfor %}
+    </ul>
+</nav>
+{% endblock %}

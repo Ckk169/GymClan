@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Booking</h1>
+
+<nav>
+    <ul>
+        <p class="btn-wrapper">
+            <a class="btn btn--action" href="/bookings/add">Booking Class</a>
+        </p>
+
+
+    </ul>
+</nav>
+<div>
+    {% for booking in all_bookings %}
+ 
+    <li>
+        <a href="/bookings/{{booking.id}}">
+            <p> {{booking.member.first_name}} {{booking.member.last_name}} -
+                {{booking.classes.name}}</p>
+        </a>
+    </li>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+{% endblock %}

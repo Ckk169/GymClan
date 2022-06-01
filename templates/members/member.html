@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>{{members.first_name}} {{members.last_name}}</h1>
+<a href="/members/{{members.id}}/edit">Edit</a>
+<a href="/members/{{members.id}}/delete">Delete</a>
+
+{% endblock %}

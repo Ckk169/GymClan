@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1> {{classes.name}} </h1>
+
+<p>Class: {{ classes.name}}</p>
+
+<h3> Booked Members :</h3>
+<ul>
+    {% for member in members %}
+    <li>{{member.first_name}} {{member.last_name}}</li>
+    {% endfor%}
+</ul>
+
+{% endblock %}

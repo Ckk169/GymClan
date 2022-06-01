@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- NEW -->
+
+    <title>Code Clan Gainzz </title>
+</head>
+
+
+<body>
+    <h1> GYM CLAN </h1>
+    <header>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/members">Gym Member</a></li>
+                <li><a href="/classes">Class</a></li>
+                <li><a href="/bookings">Booking </a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer class="container">
+        {% block content %}
+        {% endblock %}
+    </footer>
+
+
+</body>
+
+</html>

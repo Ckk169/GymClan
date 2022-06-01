@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Gym Class</h1>
+
+<nav>
+    <ul>
+        <li>
+            <a href="/classes/add">Add Class</a>
+        </li>
+
+        <div>
+            {% for gym_class in all_classes %}
+            <a href="/classes/{{gym_class.id}}">
+                <p>{{gym_class.name}} {{gym_class.size}} {{gym_class.time}}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </ul>
+</nav>
+
+
+{% endblock %}
