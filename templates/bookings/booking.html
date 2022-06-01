@@ -4,25 +4,27 @@
 
 <nav>
     <ul>
-        <p class="btn-wrapper">
-            <a class="btn btn--action" href="/bookings/add">Booking Class</a>
-        </p>
+        <!-- <p class="btn-wrapper"> -->
+        <li>
+            <a href="/bookings/add">Booking Class</a>
+        </li>
 
+        <div>
+            {% for booking in all_bookings %}
+
+            <li>
+                <a href="/bookings/{{booking.id}}">
+                    <p> {{booking.member.first_name}} {{booking.member.last_name}} -
+                        {{booking.classes.name}}</p>
+                </a>
+            </li>
+
+        </div>
+        {% endfor %}
 
     </ul>
-</nav>
-<div>
-    {% for booking in all_bookings %}
- 
-    <li>
-        <a href="/bookings/{{booking.id}}">
-            <p> {{booking.member.first_name}} {{booking.member.last_name}} -
-                {{booking.classes.name}}</p>
-        </a>
-    </li>
-    {% endfor %}
 
-</div>
+</nav>
 
 
 
